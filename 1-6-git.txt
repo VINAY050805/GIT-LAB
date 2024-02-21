@@ -1,0 +1,270 @@
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub (main)
+$ mkdir PRACTICE01
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub (main)
+$ cd PRACTICE01
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls -a
+./  ../
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git init
+Initialized empty Git repository in C:/Users/admin/OneDrive/Documents/GitHub/PRACTICE01/.git/
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls -a
+./  ../  .git/
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ touch a.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   a.txt
+
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git commit -m "a.txt file created"
+[main (root-commit) 59baa22] a.txt file created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git log
+commit 59baa22215dc9f8158624371b6efd451c2c476d2 (HEAD -> main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:19:33 2024 +0530
+
+    a.txt file created
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git show 59baa22215dc9f8158624371b6efd451c2c476d2
+commit 59baa22215dc9f8158624371b6efd451c2c476d2 (HEAD -> main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:19:33 2024 +0530
+
+    a.txt file created
+
+diff --git a/a.txt b/a.txt
+new file mode 100644
+index 0000000..e69de29
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git tag v1.0
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git tag
+v1.0
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git log -5
+commit 59baa22215dc9f8158624371b6efd451c2c476d2 (HEAD -> main, tag: v1.0)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:19:33 2024 +0530
+
+    a.txt file created
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ touch b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git commit -m "b.txt file created"
+[main 25026eb] b.txt file created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git log -2
+commit 25026eb32e67159e47b9f5d0bbb7c15d9f6d9c9b (HEAD -> main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:26:15 2024 +0530
+
+    b.txt file created
+
+commit 59baa22215dc9f8158624371b6efd451c2c476d2 (tag: v1.0)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:19:33 2024 +0530
+
+    a.txt file created
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git log -5
+commit 25026eb32e67159e47b9f5d0bbb7c15d9f6d9c9b (HEAD -> main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:26:15 2024 +0530
+
+    b.txt file created
+
+commit 59baa22215dc9f8158624371b6efd451c2c476d2 (tag: v1.0)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:19:33 2024 +0530
+
+    a.txt file created
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git log -1
+commit 25026eb32e67159e47b9f5d0bbb7c15d9f6d9c9b (HEAD -> main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Mon Feb 19 19:26:15 2024 +0530
+
+    b.txt file created
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git branch
+* main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git  branch f1
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git branch
+  f1
+* main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls
+a.txt  b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git checkout f1
+Switched to branch 'f1'
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git branch
+* f1
+  main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ ls
+a.txt  b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ touch c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git commit -m "c.txt file created"
+[f1 1f823d5] c.txt file created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git status
+On branch f1
+nothing to commit, working tree clean
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ ls
+a.txt  b.txt  c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git branch
+* f1
+  main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git checkout main
+Switched to branch 'main'
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls
+a.txt  b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git merge f1
+Updating 25026eb..1f823d5
+Fast-forward
+ c.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls
+a.txt  b.txt  c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git branch
+  f1
+* main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ touch d.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git stash save
+Saved working directory and index state WIP on main: 1f823d5 c.txt file created
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls
+a.txt  b.txt  c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ git checkout f1
+Switched to branch 'f1'
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ ls
+a.txt  b.txt  c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git stash pop
+On branch f1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   d.txt
+
+Dropped refs/stash@{0} (c21bac605a11032be5f22fd2268386dc7e6ce53c)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (f1)
+$ git checkout main
+Switched to branch 'main'
+A       d.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$ ls
+a.txt  b.txt  c.txt  d.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/PRACTICE01 (main)
+$
