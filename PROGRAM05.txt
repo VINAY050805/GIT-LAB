@@ -1,4 +1,12 @@
 admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice (main)
+$ git clone https://github.com/VINAY050805/GIT-LAB.git
+Cloning into 'GIT-LAB'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice (main)
 $ cd GIT-LAB
 
 admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (main)
