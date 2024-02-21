@@ -1,0 +1,72 @@
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice (main)
+$ cd GIT-LAB
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (main)
+$ ls
+a.txt  b.txt  Readme.md
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (main)
+$ git branch
+  f1
+* main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (main)
+$ git checkout f1
+Switched to branch 'f1'
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ ls
+a.txt  b.txt  Readme.md
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ touch c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ git commit -m "c.txt file created"
+[f1 69404c0] c.txt file created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ git status
+On branch f1
+nothing to commit, working tree clean
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ git log
+commit 69404c0598bbcb0b00c75897a8ff56181cb5ce28 (HEAD -> f1)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Sat Feb 17 15:53:40 2024 +0530
+
+    c.txt file created
+
+commit e069f146ec2fe4b2d8cb02f48dfd76e0c63a5b88 (main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Sat Feb 17 13:07:55 2024 +0530
+
+    b.txt file created
+
+commit cd36abf39a6c54727314c7c36f58c7a10dc3f42a (origin/f1)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Sat Feb 17 12:32:35 2024 +0530
+
+    a.txt file created
+
+commit f6c3435f4ede445200b3e9eb4f3471fb491c3390 (origin/main, origin/HEAD)
+Author: vinays <vinay050805@gmail.com>
+Date:   Fri Feb 16 20:48:25 2024 +0530
+
+    Readme.mf file created in github
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (f1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/practice/GIT-LAB (main)
+$ git rebase 69404c0598bbcb0b00c75897a8ff56181cb5ce28
+Successfully rebased and updated refs/heads/main.
