@@ -1,0 +1,200 @@
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub (main)
+$ git clone https://github.com/VINAY050805/GIT-LAB.git
+Cloning into 'GIT-LAB'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0
+Receiving objects: 100% (5/5), done.
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub (main)
+$ ls
+GIT-LAB/  GIT-LAB-PRACTICE/  PRACTICE01/
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub (main)
+$ cd GIT-LAB
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ ls
+Readme.md
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ touch a.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   a.txt
+
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git commit -m "a.txt file created"
+[main 4c67a86] a.txt file created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git log
+commit 4c67a867baf8275923f69f617dbeb65fda488acf (HEAD -> main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Wed Feb 21 19:11:03 2024 +0530
+
+    a.txt file created
+
+commit f6c3435f4ede445200b3e9eb4f3471fb491c3390 (origin/main, origin/HEAD)
+Author: vinays <vinay050805@gmail.com>
+Date:   Fri Feb 16 20:48:25 2024 +0530
+
+    Readme.mf file created in github
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git pull
+Already up to date.
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git pull origin
+Already up to date.
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git branch
+* main
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git branch f1
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (main)
+$ git checkout f1
+Switched to branch 'f1'
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ touch b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git status
+On branch f1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git add .
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git commit -m "b.txt file created"
+[f1 e8c4344] b.txt file created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 b.txt
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git log
+commit e8c43444809d1ce3282df346d0f228ff688e662c (HEAD -> f1)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Wed Feb 21 19:15:37 2024 +0530
+
+    b.txt file created
+
+commit 4c67a867baf8275923f69f617dbeb65fda488acf (main)
+Author: Vinay S <vinay050805@gmail.com>
+Date:   Wed Feb 21 19:11:03 2024 +0530
+
+    a.txt file created
+
+commit f6c3435f4ede445200b3e9eb4f3471fb491c3390 (origin/main, origin/HEAD)
+Author: vinays <vinay050805@gmail.com>
+Date:   Fri Feb 16 20:48:25 2024 +0530
+
+    Readme.mf file created in github
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git remote -v
+origin  https://github.com/VINAY050805/GIT-LAB.git (fetch)
+origin  https://github.com/VINAY050805/GIT-LAB.git (push)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git remote set-url origin git@github.com:VINAY050805/GIT-LAB.git
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git remote -v
+origin  git@github.com:VINAY050805/GIT-LAB.git (fetch)
+origin  git@github.com:VINAY050805/GIT-LAB.git (push)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ ssh-keygen -t ed25519 -C "vinay050805@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/admin/.ssh/id_ed25519): /c/Users/admin/.ssh/id_ed25519
+/c/Users/admin/.ssh/id_ed25519 already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/admin/.ssh/id_ed25519
+Your public key has been saved in /c/Users/admin/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:4iLGIFokBEPmScsn8cOWuBhJmhyRPB4DI12tb9ZD0/Y vinay050805@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|@@o...           |
+|@@X . .          |
+|BO=B .   .       |
+|.== o   o o      |
+|+..  ..oSo .     |
+|o+   .+.o   E    |
+|. + .o.  .       |
+| . . .           |
+|                 |
++----[SHA256]-----+
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ eval "$(ssh-agent -s)"
+Agent pid 1565
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ ssh-add ~/.ssh/id_ed25519
+Enter passphrase for /c/Users/admin/.ssh/id_ed25519: 
+Identity added: /c/Users/admin/.ssh/id_ed25519 (vinay050805@gmail.com)
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIt/dB92XufeOvjJfX8r6dU0AaUBlxuNq/FVoTzVPV+Q vinay050805@gmail.com
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$ git push origin f1
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 576 bytes | 288.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:VINAY050805/GIT-LAB.git
+   cd36abf..87685ab  f1 -> f1
+
+admin@LAPTOP-KORT2CE1 MINGW64 ~/OneDrive/Documents/GitHub/GIT-LAB (f1)
+$
